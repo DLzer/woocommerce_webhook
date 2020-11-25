@@ -52,7 +52,7 @@ function process_completed_order( $order_id )
 
     // Prepare and send request
     $request = new Request($user, $orderData, $shipping_address, $billing_address);
-    $requstData = $this->request->getRequest();
+    $requestData = $this->request->getRequest();
     $response = $this->request->sendRequest('API_URL', true, $requestData, false);
 
     return ($response ? $response : false);
